@@ -23,6 +23,10 @@ const secondSlideImg = get('.home .content-destination img')
 const button = get('.home .destination .btn')
 
 // creating event listeners
-const 
+function lunch(event){
+event.target.style.backgroundColor = 'gold';
+
+}
+logoHeading.addEventListener('mouseover', lunch)
 
 
