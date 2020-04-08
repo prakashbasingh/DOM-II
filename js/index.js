@@ -25,8 +25,15 @@ const button = get('.home .destination .btn')
 // creating event listeners
 function lunch(event){
 event.target.style.backgroundColor = 'gold';
+event.target.style.color = 'red'
+setTimeout(function(){
+    event.target.style.backgroundColor ='';
+}, 500)
+setTimeout(function(){
+    event.target.style.color ='';
+}, 500)
 
-}
+} false;
 logoHeading.addEventListener('mouseover', lunch)
 
 
