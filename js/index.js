@@ -95,6 +95,8 @@ window.addEventListener('load', loading)
 
 // focus*****************
 // clicking on navigation item green border appear and disappear if clicked some where on the page
+// const navLink = document.querySelectorAll('.nav-link')
+
 function focusing(event){
     navLink.style.border ='2px solid green'    
 }
@@ -104,13 +106,16 @@ function blurry(event){
 navLink.addEventListener('focus', focusing)
 navLink.addEventListener('blur', blurry)
 
+
 // resize*****************
 function resizing(event){
-
+    alert('making larger and smaller browser size')
 }
-// ... .addEventListener('resize', resizing)
+window.addEventListener('resize', resizing)
+
 
 // scroll*****************
+// scrolling mouse wheel causes popup box appears with 'Well Done!!!! Scroll is working.'
 function scrolling(event){
     alert('Well Done!!!! Scroll is working.')
 }
