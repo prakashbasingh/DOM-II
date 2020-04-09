@@ -22,7 +22,7 @@ const letsGo = get('.home .content-section .text-section h2')
 const letsGoImg = get('.home .content-section .img-content')
 const haveFunImg = get('.home .inverse-content .img-content')
 const adventureAwaits = get('.home .inverse-content h2')
-const pickDestination = get('.home .content-destination h2')
+const pickDestination = get('.home .content-destination')
 const secondSlideImg = get('.home .content-destination img')
 
 const button = get('.btn')
@@ -108,8 +108,9 @@ navLink.addEventListener('blur', blurry)
 
 
 // resize*****************
+// when browser window size changes popup window message appears.
 function resizing(event){
-    alert('making larger and smaller browser size')
+    alert('Making larger and smaller browser size success')
 }
 window.addEventListener('resize', resizing)
 
@@ -128,9 +129,8 @@ function selecting(event){
 // ... .addEventListener('select', selecting)
 
 // dblclick*****************
-// function dblclickNavLink(event){
+function doubleClick(event){
+     pickDestination.style.backgroundColor = 'orange'
+}
     
-//     event.target.style.backgroundColor = 'orange'
-//     }
-    
-    // navLink.addEventListener('dblclick', addEventListener)
+pickDestination.addEventListener('dblclick', doubleClick)
