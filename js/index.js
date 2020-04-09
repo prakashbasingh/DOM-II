@@ -94,13 +94,12 @@ window.addEventListener('load', loading)
 
 
 // focus*****************
-
+// clicking on navigation item green border appear and disappear if clicked some where on the page
 function focusing(event){
     navLink.style.border ='2px solid green'    
 }
 function blurry(event){
     navLink.style.border =''    
-
 }
 navLink.addEventListener('focus', focusing)
 navLink.addEventListener('blur', blurry)
@@ -113,9 +112,9 @@ function resizing(event){
 
 // scroll*****************
 function scrolling(event){
-
+    alert('Well Done!!!! Scroll is working.')
 }
-// ... .addEventListener('scroll', scrolling)
+window.addEventListener('scroll', scrolling)
 
 // select*****************
 function selecting(event){
