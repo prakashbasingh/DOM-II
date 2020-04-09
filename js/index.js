@@ -16,6 +16,7 @@ const navLink = get('.nav-link')
 const nav = get('nav')
 // container home
 const welcomeToFunBus = get ('.home .intro h2')
+const textContent = get('.content-section .text-content')
 const letsGo = get('.home .content-section .text-section h2')
 const letsGoImg = get('.home .content-section .img-content')
 const haveFunImg = get('.home .inverse-content .img-content')
@@ -23,7 +24,7 @@ const adventureAwaits = get('.home .inverse-content h2')
 const pickDestination = get('.home .content-destination h2')
 const secondSlideImg = get('.home .content-destination img')
 
-const button = get('.home .destination .btn')
+const button = get('.btn')
 
 // creating event listeners
 
@@ -67,23 +68,47 @@ function wheeling (event){
 welcomeToFunBus.addEventListener('wheel', wheeling)
 
 // drag / drop*****************
+textContent.style.border = '2px solid gray'
+textContent.setAttribute('draggable', true)
+letsGoImg.setAttribute('draggable', true)
+function draggable(event){
 
+}
+textContent.addEventListener('drag', draggable)
 
+function dropping(event){
+    
+}
 
 // load*****************
-
+function loading(event){
+    alert('Hello Hello!!! Welcome to the Fun Bus Adventure Web Site.')
+}
+window.addEventListener('load', loading)
 
 // focus*****************
+function focusing(event){
 
+}
+// ... .addEventListener('focus', focusing)
 
 // resize*****************
+function resizing(event){
 
+}
+// ... .addEventListener('resize', resizing)
 
 // scroll*****************
+function scrolling(event){
 
+}
+// ... .addEventListener('scroll', scrolling)
 
 // select*****************
+function selecting(event){
 
+}
+// ... .addEventListener('select', selecting)
 
 // dblclick*****************
 // function dblclickNavLink(event){
