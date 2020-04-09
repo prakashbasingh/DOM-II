@@ -72,17 +72,24 @@ function wheeling (event){
 welcomeToFunBus.addEventListener('wheel', wheeling)
 
 // drag / drop*****************
-textContent.style.border = '2px solid gray'
-textContent.setAttribute('draggable', true)
-letsGoImg.setAttribute('draggable', true)
+
 function draggable(event){
-
+    event.target.style.transform = 'scale(0.5)'
+    event.target.style.border = '2px solid red'
 }
-textContent.addEventListener('drag', draggable)
-
-function dropping(event){
+firstImg.addEventListener('drag', draggable)
     
-}
+// function dropDrop(event){
+//     event.target.style.transform = 'scale(1)'
+//     event.target.style.border = ''
+// }
+// firstImg.addEventListener('drop', dropDrop)
+
+
+
+// function dropping(event){
+    
+// }
 
 // load*****************
 // on  reloading web page alert box appears and the message is "Hello Hello!!! Welcome to the Fun Bus Adventure Web Site."
@@ -124,13 +131,14 @@ window.addEventListener('scroll', scrolling)
 
 // select*****************
 function selecting(event){
-
+    btn.style.backgroundColor = 'green'
 }
-// ... .addEventListener('select', selecting)
+btn.addEventListener('select', selecting)
+
 
 // dblclick*****************
+// on double click class='content-destination' background color changes to orange 
 function doubleClick(event){
      pickDestination.style.backgroundColor = 'orange'
 }
-    
 pickDestination.addEventListener('dblclick', doubleClick)
