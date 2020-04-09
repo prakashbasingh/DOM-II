@@ -58,26 +58,15 @@ document.addEventListener('keydown', navBackColor)
 
 // wheel*******************s**
 
-document.addEventListener('wheel', event => {
-    event.preventDefault();
-    const delta = Math.sign(event.deltaY);
-    console.info(delta);
-})
+function wheeling (event){
+    // if(event)
+    event.target.style.color = 'red'
+    event.target.style.backgroundColor = 'gray'
+}
 
-
-
-
-
-// function wheelLetsGoImg(event){
-  
-// }
-// letsGoImg.addEventListener('wheel', wheelLetsGoImg)
-
+welcomeToFunBus.addEventListener('wheel', wheeling)
 
 // drag / drop*****************
-// const destinationDrag = document.querySelector('destination')
-// destinationDrag.setAttribute('draggable', 'true')
-// destinationDrag.appendChild()
 
 
 
