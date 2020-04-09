@@ -61,6 +61,7 @@ document.addEventListener('keydown', navBackColor)
 //     }
 //   });
 
+
 // wheel*******************s**
 // on rolling mouse wheel, "Welcome To Fun Bus" text color and background color  changes to red and gray respectively
 function wheeling (event){
@@ -86,10 +87,6 @@ firstImg.addEventListener('drag', draggable)
 // firstImg.addEventListener('drop', dropDrop)
 
 
-
-// function dropping(event){
-    
-// }
 
 // load*****************
 // on  reloading web page alert box appears and the message is "Hello Hello!!! Welcome to the Fun Bus Adventure Web Site."
@@ -124,16 +121,29 @@ window.addEventListener('resize', resizing)
 
 // scroll*****************
 // scrolling mouse wheel causes popup box appears with 'Well Done!!!! Scroll is working.'
+
+const mainNavigation = get('.main-navigation')
 function scrolling(event){
-    alert('Well Done!!!! Scroll is working.')
+       alert('Well Done!!!! Scroll is working.')
+    // body.style.backgroundColor = 'light-grey'
 }
 window.addEventListener('scroll', scrolling)
 
 // select*****************
-function selecting(event){
-    btn.style.backgroundColor = 'green'
+// const footerNew = document.querySelector('.footer')
+// const input = document.newElement('input')
+// input.setAttribute('value', Fun-Bus-Adventure)
+// footerNew.appendChild(input)
+// const emptyPara = document.newElement('p')
+// footerNew.appendChild(emptyPara)
+
+function logSelection(event){
+    const log = document.querySelector('#log')
+    const selection = event.target.value.substring(event.target.selectionStart, event.target.selectionEnd);
+    log.textContent = `You selected: ${selection}`;
 }
-btn.addEventListener('select', selecting)
+const input = document.querySelector('input')
+input.addEventListener('select', logSelection)
 
 
 // dblclick*****************
